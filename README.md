@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <img width="460" height="300" src="![img](https://user-images.githubusercontent.com/59442907/97291421-e8235c00-186f-11eb-9936-f6dfd581c9dc.jpg)">
+  <img src="![img](https://user-images.githubusercontent.com/59442907/97291421-e8235c00-186f-11eb-9936-f6dfd581c9dc.jpg)">
 </p>
 
 # Titanic Survival Predictor ML Model 
