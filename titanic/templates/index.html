@@ -4,50 +4,80 @@
 <head>
   <meta charset="utf-8">
   <title>Home page</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
+    }
+  </style>
 </head>
 
-<body>
-  <h1>Titanic survival prediction</h1>
+
+<body class="center">
+
+  <h1 style="color:rgb(44, 44, 90); font-weight: 700;">Titanic Survival Predictor</h1>
+  <p style="color:rgb(51, 51, 83); font-weight: 700;">Can a passenger with your given characteristics survive?</p>
+
   <form action="result">
     {% csrf_token %}
 
-    <p>Passenger Class:</p>
-    <input type="text" name="pclass">
-    <br>
+    <div class="form-group">
+      <input class="form-control" placeholder="Passenger Class (1, 2 or 3)" required type="text" name="pclass">
+    </div>
 
-    <p>Sex:</p>
-    <input type="text" name="sex">
-    <br>
 
-    <p>Age:</p>
-    <input type="text" name="age">
-    <br>
+    <div class="form-group">
+      <input class="form-control" placeholder="Sex (0 for Male, 1 for Female)" required type="text" name="sex">
+    </div>
 
-    <p>Sibsp:</p>
-    <input type="text" name="sibsp">
-    <br>
 
-    <p>Parch:</p>
-    <input type="text" name="parch">
-    <br>
+    <div class="form-group">
+      <input class="form-control" placeholder="Age" required type="text" name="age">
+    </div>
 
-    <p>Fare:</p>
-    <input type="text" name="fare">
-    <br>
 
-    <p>Embark Category C:</p>
-    <input type="text" name="embC">
-    <br>
+    <div class="form-group">
+      <input class="form-control" placeholder="No. of Sibling(s) or Spouse(s)" required type="text" name="sibsp">
+    </div>
 
-    <p>Embark Category Q:</p>
-    <input type="text" name="embQ">
-    <br>
 
-    <p>Embark Category S:</p>
-    <input type="text" name="embS">
-    <br>
+    <div class="form-group">
+      <input class="form-control" placeholder="Parch" type="text" required name="parch">
+    </div>
 
-    <input type="submit" value='Get Predictions'>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Ticket Fare" required type="text" name="fare">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Embark C (1 if applies)" required type="text" name="embC">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Embark Q (1 if applies)" required type="text" name="embQ">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Embark S (1 if applies)" required type="text" name="embS">
+    </div>
+
+
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
   </form>
 </body>
 

@@ -4,13 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>Result</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Prediction</h1>
+  <div class="center">
+    {% if result == 'yes' %}
+    <h1 style=" color: rgb(124, 230, 124); font-weight: 900;">
+      Survived!
+    </h1>
 
-  {{ result }}
+    {% elif result == 'no' %}
+    <h1 style="color: rgb(236, 111, 111); font-weight: 900;">
+      Coudn't survive!
+    </h1>
 
+    {% else %}
+    <h1>Some error occured</h1>
+    {% endif %}
+  </div>
 </body>
 
 </html>
