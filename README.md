@@ -3,5 +3,5 @@
 # Titanic Survival Predictor ML Model 
 
 ### Famous kaggle competetion: to make a Titanic Survival Prediciton model, delpoyed as web app using Django 3.0.
-The model and dataset can be found (here)[https://github.com/k2maan/TitanicPredictionDjangoML/tree/master/Model%20and%20data]
-Also check the (Titanic: Machine learning from Disaster)[https://www.kaggle.com/c/titanic], the dataset can also be found there.
+The model and dataset can be found [here](https://github.com/k2maan/TitanicPredictionDjangoML/tree/master/Model%20and%20data)
+Also check the [Titanic: Machine learning from Disaster](https://www.kaggle.com/c/titanic), the dataset can also be found there.
