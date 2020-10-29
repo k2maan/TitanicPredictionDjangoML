@@ -6,3 +6,5 @@
 The model and dataset can be found [here](https://github.com/k2maan/TitanicPredictionDjangoML/tree/master/Model%20and%20data). Also check the competetion [Titanic: Machine learning from Disaster](https://www.kaggle.com/c/titanic) on kaggle.
 
 
+## Screenshots-
+![screenshot](https://user-images.githubusercontent.com/59442907/97587747-bf42c880-1a21-11eb-8d54-59730337c737.jpg)
