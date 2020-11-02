@@ -1,29 +1,25 @@
 from django.shortcuts import render
 import pickle
 
-
 def home(request):
     return render(request, 'index.html')
 
-
 def getPredictions(pclass, sex, age, sibsp, parch, fare, C, Q, S):
+    model = pickle.load(open('ml_model.sav', 'rb'))
+    scaled = pickle.load(open('scaler.sav', 'rb'))
 
-    model = pickle.load(open("ml_model.sav", "rb"))
-    scaled = pickle.load(open("scaler.sav", "rb"))
-
-    prediction = model.predict(scaled.transform(
-        [[pclass, sex, age, sibsp, parch, fare, C, Q, S]]))
-
+    prediction = model.predict(scaled.transform([
+        [pclass, sex, age, sibsp, parch, fare, C, Q, S]
+    ]))
+    
     if prediction == 0:
-        return "no"
+        return 'no'
     elif prediction == 1:
-        return "yes"
+        return 'yes'
     else:
-        return "Some error occured."
-
+        return 'error'
 
 def result(request):
-
     pclass = int(request.GET['pclass'])
     sex = int(request.GET['sex'])
     age = int(request.GET['age'])

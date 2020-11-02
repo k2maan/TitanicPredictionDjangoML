@@ -18,26 +18,25 @@
       top: 50%;
       transform: translate(-50%, -50%);
       font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
     }
   </style>
 </head>
 
-<body>
-  <div class="center">
-    {% if result == 'yes' %}
-    <h1 style=" color: rgb(124, 230, 124); font-weight: 900;">
-      Survived!
-    </h1>
+<body class="center">
 
-    {% elif result == 'no' %}
-    <h1 style="color: rgb(236, 111, 111); font-weight: 900;">
-      Coudn't survive!
-    </h1>
+  {% if result == 'yes' %}
+  <h1 style=" color: rgb(88, 180, 88); font-weight: 900;">
+  <i class="fas fa-swimmer"></i> Survived!
 
-    {% else %}
-    <h1>Some error occured</h1>
-    {% endif %}
-  </div>
+  {% elif result == 'no' %}
+  <h1 style="color: rgb(212, 85, 85); font-weight: 900;">
+  <i class="fas fa-skull"></i> Coudn't survive!
+
+  {% else %}
+  <h1 style="color: rgb(31, 15, 15); font-weight: 900;">ERROR</h1>
+  {% endif %}
+
 </body>
 
 </html>
